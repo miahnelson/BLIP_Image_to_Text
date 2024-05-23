@@ -1,0 +1,43 @@
+body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+#pasteBox {
+    width: 300px;
+    height: 300px;
+    border: 2px dashed #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+}
+#pasteBox img {
+    max-width: 100%;
+    max-height: 100%;
+}
+#progress {
+    visibility: hidden; /* Hidden by default */
+    margin: 20px auto;
+    width: 50px; /* Smaller progress animation */
+}
+.spinner-border {
+    width: 3rem;
+    height: 3rem;
+}
+.results-box {
+    border: 2px solid green;
+    margin: 20px auto;
+    padding: 10px;
+    width: 50%;
+}
+.table {
+    margin: 20px auto; /* Centers the table */
+    width: 75%; /* Adjust width as needed */
+    border: 2px solid green;
+}
+.table th, .table td {
+    text-align: center; /* Centering table headers and cells */
+}
+.table td:nth-child(2), .table td:nth-child(5) {
+    text-align: left; /* Left-aligning specific table columns (Model ID and Results) */
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image to Text</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Image to Text</h1>
+        <div id="pasteBox">Paste your image here</div>
+        <button id="analyzeButton" class="btn btn-primary mt-3" disabled>Analyze Image</button>
+        <div id="progress" class="progress">
+            <div class="spinner-border text-primary" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        </div>
+        <div id="combinedResults" class="results-box"><span id="resultsText"></span> <button class="btn btn-success" onclick="copyToClipboard('resultsText')">Copy</button></div>
+        <table class="table table-striped mt-3">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Model ID</th>
+                    <th>Downloads</th>
+                    <th>Likes</th>
+                    <th>Results</th>
+                </tr>
+            </thead>
+            <tbody id="blipModelSelect">
+                {% for model in blip_models %}
+                <tr>
+                    <td><input type="checkbox" id="{{ model.model_id }}" name="blip_models" value="{{ model.model_id }}"></td>
+                    <td>{{ model.model_id }}</td>
+                    <td>{{ model.downloads }}</td>
+                    <td>{{ model.likes }}</td>
+                    <td id="result_{{ model.model_id }}"></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</body>
+</html>
