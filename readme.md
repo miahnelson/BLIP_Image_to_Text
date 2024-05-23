@@ -16,11 +16,11 @@ flask_app/
 ├── templates/
 │   └── upload.html
 ├── static/
-│   ├── css/
-│   │   └── styles.css
-│   └── js/
-│       └── scripts.js
-└── __init__.py
+   ├── css/
+   │   └── styles.css
+   └── js/
+       └── scripts.js
+
 ```
 
 ## Installation
@@ -62,6 +62,14 @@ flask_app/
 3. Click "Analyze Image" to process the image and extract text.
 
 4. View and copy the results as needed.
+
+Example Generated Prompt
+![image](https://github.com/miahnelson/BLIP_Image_to_Text/assets/12887128/87d327f9-c05d-4bb4-9ec2-aa99d015fbc6)
+
+Output of Prompt using InvokeAI
+![image](https://github.com/miahnelson/BLIP_Image_to_Text/assets/12887128/77cb2766-f99f-489e-9cf9-9c7a056d211c)
+
+
 
 ## License
 
